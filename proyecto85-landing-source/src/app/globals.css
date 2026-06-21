@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 42 39% 95%;
+  --foreground: 222 87% 6%;
+  --card: 222 76% 9%;
+  --card-foreground: 42 39% 95%;
+  --primary: 42 63% 58%;
+  --primary-foreground: 222 87% 6%;
+  --secondary: 219 77% 10%;
+  --secondary-foreground: 42 39% 95%;
+  --muted: 41 22% 89%;
+  --muted-foreground: 219 9% 41%;
+  --accent: 42 76% 75%;
+  --accent-foreground: 222 87% 6%;
+  --border: 42 30% 78%;
+  --input: 42 30% 78%;
+  --ring: 42 63% 58%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  min-height: 100vh;
+  background: #f8f5ef;
+  color: #020b1d;
+  font-family: Inter, "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+::selection {
+  background: rgba(216, 175, 79, 0.35);
+  color: #020b1d;
+}
+
+.serif-title {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #f3d98b 0%, #d8af4f 38%, #fff0bd 50%, #a87824 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.report-page {
+  background:
+    linear-gradient(180deg, rgba(248, 245, 239, 0.98), rgba(239, 232, 218, 0.96)),
+    radial-gradient(circle at 20% 10%, rgba(216, 175, 79, 0.2), transparent 36%);
+}
+
+.premium-border {
+  position: relative;
+}
+
+.premium-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(243, 217, 139, 0.7), rgba(216, 175, 79, 0.06), rgba(255, 255, 255, 0.16));
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
